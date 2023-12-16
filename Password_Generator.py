@@ -10,8 +10,9 @@ Symbols = ['`', '!', '@', '#', '$', '%', '^', '&', '*']
 print('HELLO! I AM ROBOT GABE, I GENERATE PASSWORD... HOW CAN I BE OF HELP? \n')
 
 Response = input('Would you like to generate a password?  \n Enter Yes/No:  \n')
+#Responses = Response.lower
 
-if Response == 'Yes' or 'YES':
+if Response == 'yes' or 'YES':
     while True:
         no_letter = (input('Enter the number of letters you desire:  \n'))
         if no_letter.isdecimal():
@@ -30,35 +31,40 @@ if Response == 'Yes' or 'YES':
         if no_symbols.isdecimal():
             break
         print('Please enter a digit')
-else:
+
+
+
+
+    New_no_letter = int(no_letter)
+    New_no_numbers = int(no_numbers)
+    New_no_symbols = int(no_symbols)
+
+    Pass_Letter=[]
+    for i in range(1, New_no_letter+1):
+        char = random.choice(Letters)
+        Pass_Letter += char
+
+    for i in range(1, New_no_numbers+1):
+        char = random.choice(Numbers)
+        Pass_Letter += char
+
+    for i in range(1, New_no_symbols+1):
+        char = random.choice(Symbols)
+        Pass_Letter += char
+
+    #print(Pass_Letter)
+    random.shuffle(Pass_Letter)
+    #print(Pass_Letter)
+
+    New_Pass = ""
+    for char in Pass_Letter:
+        New_Pass += char
+    print(New_Pass)
+
+elif Response =='No' or 'NO': 
     print('Thanks for visiting our sites')
-
-New_no_letter =int(no_letter)
-New_no_numbers = int(no_numbers)
-New_no_symbols = int(no_symbols)
-
-Pass_Letter=[]
-for i in range(1, New_no_letter+1):
-    char = random.choice(Letters)
-    Pass_Letter += char
-
-for i in range(1, New_no_numbers+1):
-    char = random.choice(Numbers)
-    Pass_Letter += char
-
-for i in range(1, New_no_symbols+1):
-    char = random.choice(Symbols)
-    Pass_Letter += char
-
-#print(Pass_Letter)
-random.shuffle(Pass_Letter)
-#print(Pass_Letter)
-
-New_Pass = ""
-for char in Pass_Letter:
-    New_Pass += char
-print(New_Pass)
-
+else:
+    print('Please enter a valid input')
 
 
 
