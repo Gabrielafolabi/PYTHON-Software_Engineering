@@ -12,31 +12,41 @@ print('HELLO! I AM ROBOT GABE, I GENERATE PASSWORD... HOW CAN I BE OF HELP? \n')
 Response = input('Would you like to generate a password?  \n Enter Yes/No:  \n')
 
 if Response == 'Yes' or 'YES':
-        no_letter = int(input('Enter the number of letters you desire:  \n'))
+    no_letter = int(input('Enter the number of letters you desire:  \n'))
+    print('Please enter a digit') 
+    no_numbers = int(input('Enter the number of digits you desire:  \n'))
         
-        print('Please enter a digit') 
-        no_numbers = int(input('Enter the number of digits you desire:  \n'))
+    print('Please enter a digit')
+    no_symbols = int(input('Enter the number of symbols you desire:  \n'))
         
-        print('Please enter a digit')
-        no_symbols = int(input('Enter the number of symbols you desire:  \n'))
-        
-        print('Please enter a digit')
+    print('Please enter a digit')
 else:
     print('Thanks for visiting our sites')
 
-Pass_Letter = ""
-for i in range(no_letter):
+Pass_Letter=[]
+for i in range(1, no_letter+1):
     char = random.choice(Letters)
-    Pass_Letter = Pass_Letter + char
+    Pass_Letter += char
 
-for i in range(no_numbers):
+for i in range(1, no_numbers+1):
     char = random.choice(Numbers)
-    Pass_Letter = Pass_Letter + char
+    Pass_Letter += char
 
-for i in range(no_symbols):
+for i in range(1, no_symbols+1):
     char = random.choice(Symbols)
-    Pass_Letter = Pass_Letter + char
+    Pass_Letter += char
+
 print(Pass_Letter)
+random.shuffle(Pass_Letter)
+print(Pass_Letter)
+
+New_Pass = ""
+for char in Pass_Letter:
+    New_Pass += char
+print(New_Pass)
+
+
+
 
     
 
