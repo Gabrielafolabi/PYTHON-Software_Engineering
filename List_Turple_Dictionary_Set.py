@@ -16,8 +16,12 @@ print(List)
 '''
 
 spam = ['a', 'd', 'f', 'k', 'c']
-spam.sort()
+spam.sort() #sort alphabetically or smallest to largest, if intergers
 print(spam)
+spam.sort(reverse=True)
+print(spam)
+
+
 
 
 
