@@ -39,7 +39,7 @@ if Response == 'yes' or 'YES':
     New_no_numbers = int(no_numbers)
     New_no_symbols = int(no_symbols)
 
-    Pass_Letter=[]
+    Pass_Letter= []
     for i in range(1, New_no_letter+1):
         char = random.choice(Letters)
         Pass_Letter += char
@@ -52,9 +52,9 @@ if Response == 'yes' or 'YES':
         char = random.choice(Symbols)
         Pass_Letter += char
 
-    #print(Pass_Letter)
+    print(Pass_Letter)
     random.shuffle(Pass_Letter)
-    #print(Pass_Letter)
+    print(Pass_Letter)
 
     New_Pass = ""
     for char in Pass_Letter:
