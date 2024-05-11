@@ -19,3 +19,17 @@ while num <= 1500:
 # Print the result
 print("The sum of numbers between 1000 and 1500 inclusive is:", total)
 
+
+
+your_num = int(input("put in your desired number"))
+
+i = 2
+sum_even = 0
+while (i <= your_num ):
+    if i % 2 == 0:
+        sum_even = sum_even + i
+        i = i + 2
+    
+print(sum_even)
+    
+
