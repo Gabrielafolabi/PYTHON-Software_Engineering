@@ -5,8 +5,6 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
            'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U','W', 'X', 'Y', 'Z', ' ', '.']
 
 
-
-
 def encode(plain_text, shift_number):
     new_letter = ""
     for i in plain_text:
@@ -15,7 +13,6 @@ def encode(plain_text, shift_number):
         shift_letter = alphabet[new_position]
         new_letter += shift_letter
     print(f"Your encoded text is {new_letter}")
-
 
 def decode(plain_text, shift_number):
     new_letter = ""
@@ -26,7 +23,6 @@ def decode(plain_text, shift_number):
         new_letter += shift_letter 
         
     print(f"Your decoded text is {new_letter}")
-
 
 should_continue = True
 name = input("What is your name?")
@@ -41,7 +37,6 @@ while should_continue:
         #print ("please input encode or decode")
     text = input("your plain text:  ").lower()
     shift = int(input("put in the private crypto key:  "))
-    
     
     if direction == "encode":    
         encode(plain_text=text, shift_number=shift)
